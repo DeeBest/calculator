@@ -2,8 +2,10 @@
     background-color: beige;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .container {
+    flex: 1 1 auto;
     background-color: blueviolet;
     height: 500px;
     width: 300px;
@@ -11,6 +13,8 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
+    align-self: center;
 }
 .screen {
     background-color: rgb(233, 177, 57);
@@ -22,16 +26,15 @@
 }
 .para {
     color: black;
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 800;
 }
 .btnDiv {
     width: 280px;
     height: 400px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    margin: 10px;
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -40,7 +43,14 @@
     height: 60px;
     margin: 5px;
     border-radius: 10px;
+    font-size: 20px;
 }
 #equalBtn {
     width: 130px;
+}
+.opBtn {
+    background-color: rgb(229, 238, 106);
+}
+.numBtn {
+    background-color: rgb(144, 197, 243);
 }
