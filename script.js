@@ -93,7 +93,7 @@ function operate() {
                 break;
     }
 
-    displayPara.textContent = a + operator + b + ' ' + '= ' + sum;
+    displayPara.textContent = sum;
 }
 
 let clearBtn = document.createElement('button');
@@ -142,15 +142,6 @@ let positiveBtn = document.createElement('button');
         }
     });
     btnDiv.appendChild(positiveBtn);
-
-let percentBtn = document.createElement('button');
-    percentBtn.classList.add('btn', 'opBtn');
-    percentBtn.setAttribute('id', 'percentBtn');
-    percentBtn.textContent = ('%');
-    percentBtn.addEventListener('click', () => {
-        displayPara.textContent = (Number/100).toString
-    })
-    btnDiv.appendChild(percentBtn);
 
 let divideBtn = document.createElement('button');
     divideBtn.classList.add('btn', 'opBtn');
@@ -387,4 +378,8 @@ function multiply(a, b) {
     
 function divide(a, b) {
     return a / b;
+}
+
+function inputPercent(a,b) {
+    displayPara.textContent = (a,b/100).toString();
 }

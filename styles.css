@@ -48,6 +48,9 @@
 #equalBtn {
     width: 130px;
 }
+#clearBtn {
+    width: 130px;
+}
 .opBtn {
     background-color: rgb(229, 238, 106);
 }
