@@ -103,9 +103,13 @@ let clearBtn = document.createElement('button');
     clearBtn.addEventListener('click', () => {
         if (opBtnClicked == false) {
             a = '';
+            b = '';
+            sum = '';
             displayPara.textContent = 0;
         } else if (opBtnClicked == true) {
+            a = '';
             b = '';
+            sum = '';
             displayPara.textContent = 0;
         }
     });
@@ -150,7 +154,9 @@ let divideBtn = document.createElement('button');
     divideBtn.classList.add('btn', 'opBtn');
     divideBtn.setAttribute('id', 'divideBtn');
     divideBtn.textContent = ('÷');
-    divideBtn.addEventListener('click', chooseOperator('/'));
+    divideBtn.addEventListener('click', () => {
+        chooseOperator('/')
+    });
     btnDiv.appendChild(divideBtn);
 
 let sevenBtn = document.createElement('button');
@@ -202,7 +208,9 @@ let multiplyBtn = document.createElement('button');
     multiplyBtn.classList.add('btn', 'opBtn');
     multiplyBtn.setAttribute('id', 'multiplyBtn');
     multiplyBtn.textContent = ('*');
-    multiplyBtn.addEventListener('click', chooseOperator('*'));
+    multiplyBtn.addEventListener('click', () => {
+        chooseOperator('*')
+    });
     btnDiv.appendChild(multiplyBtn);
 
 let fourBtn = document.createElement('button');
@@ -254,7 +262,9 @@ let subtractionBtn = document.createElement('button');
     subtractionBtn.classList.add('btn', 'opBtn');
     subtractionBtn.setAttribute('id', 'subtractionBtn');
     subtractionBtn.textContent = ('-');
-    subtractionBtn.addEventListener('click', chooseOperator('-'));
+    subtractionBtn.addEventListener('click', () => {
+        chooseOperator('-')
+    });
     btnDiv.appendChild(subtractionBtn);
 
 let oneBtn = document.createElement('button');
@@ -306,7 +316,9 @@ let addBtn = document.createElement('button');
     addBtn.classList.add('btn', 'opBtn');
     addBtn.setAttribute('id', 'addBtn');
     addBtn.textContent = ('+');
-    addBtn.addEventListener('click', chooseOperator('+'));
+    addBtn.addEventListener('click', () => {
+        chooseOperator('+')
+    });
     btnDiv.appendChild(addBtn);
 
 let zeroBtn = document.createElement('button');
@@ -359,26 +371,18 @@ let equalBtn = document.createElement('button');
     });
     btnDiv.appendChild(equalBtn);
 
-function addition() {
-    a + b;
-};
-
-function subtraction() {
-    a - b;
-};
-
-function multiplication() {
-    a * b;
-};
-
-function division() {
-    if (b === 0) {
-        displayPara.textContent = ('hahaha!');
-    } else {
-        a / b
-    }
-};
-
-function total() {
+function add(a, b) {
+    return parseFloat(a) + parseFloat(b);
+}
     
-};
+function subtract(a, b) {
+    return a - b;
+}
+    
+function multiply(a, b) {
+    return a * b;
+}
+    
+function divide(a, b) {
+    return a / b;
+}
