@@ -123,24 +123,24 @@ let positiveBtn = document.createElement('button');
     positiveBtn.textContent = ('+/-');
     positiveBtn.addEventListener('click', () => {
         let negative = '-';
-        if(opBtnClicked === false) {
+        if(opBtnClicked == false) {
             if(a.includes('-') != true) {
                 a = negative += a;
                 displayPara.textContent = a;
-            }else if (opBtnClicked == true) {
+            }else if (a.includes('-') == true) {
                 a = a.substring(1);
                 displayPara.textContent = a;
             }
         } else if (opBtnClicked == true) {
             if(b.includes('-') != true) {
-                a = negative += b;
+                b = negative += b;
                 displayPara.textContent = b;
             }else if (b.includes('-') == true) {
                 b = b.substring(1);
                 displayPara.textContent = b;
             }
         }
-    })
+    });
     btnDiv.appendChild(positiveBtn);
 
 let percentBtn = document.createElement('button');
