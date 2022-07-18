@@ -93,7 +93,7 @@ function operate() {
                 break;
     }
 
-    displayPara.textContent = sum;
+    displayPara.textContent = a + operator + b + ' ' + '= ' + sum;
 }
 
 let clearBtn = document.createElement('button');
@@ -105,11 +105,13 @@ let clearBtn = document.createElement('button');
             a = '';
             b = '';
             sum = '';
+            opBtnClicked = false;
             displayPara.textContent = 0;
         } else if (opBtnClicked == true) {
             a = '';
             b = '';
             sum = '';
+            opBtnClicked = false;
             displayPara.textContent = 0;
         }
     });
